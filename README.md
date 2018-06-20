@@ -32,6 +32,15 @@ You know have a python interpreter that runs commands directly on the board.
 
 To exit picocom first Ctrl-D (to stop the board) then Ctrl-A Ctrl-Q.
 
+## Run code on the board
+
+If you only want to run your python code on the esp32 you can use this command :
+```
+ampy -p /dev/ttyUSB0 run my_code.py
+```
+
+This works if the program ends, if not you'll want to add the --no-output option and open a picocom in another terminal to see qhat the board is printing.
+
 ## Add code on the board
 
 There are two files that are executed at the start "boot.py" then "main.py".
